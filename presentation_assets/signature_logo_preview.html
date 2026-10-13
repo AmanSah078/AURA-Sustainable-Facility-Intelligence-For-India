@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background: #0B0F17;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  .container {
+    position: relative;
+    width: 800px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  svg {
+    width: 100%;
+    height: 100%;
+    filter: drop-shadow(0 0 40px rgba(19, 136, 8, 0.25)) drop-shadow(0 0 60px rgba(255, 153, 51, 0.25));
+  }
+</style>
+</head>
+<body>
+<div class="container">
+<svg viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Background Radial Gradient -->
+    <radialGradient id="bgGlow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#14213d" stop-opacity="0.6"/>
+      <stop offset="60%" stop-color="#0b111e" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#0B0F17" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Tricolor Signature Gradients -->
+    <linearGradient id="saffronToWhite" x1="0%" y1="0%" x2="50%" y2="80%">
+      <stop offset="0%" stop-color="#FF7A00" stop-opacity="1"/>
+      <stop offset="35%" stop-color="#FFA834" stop-opacity="1"/>
+      <stop offset="85%" stop-color="#FFFFFF" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="whiteToGreen" x1="20%" y1="20%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="40%" stop-color="#2ED573" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="1"/>
+    </linearGradient>
+
+    <linearGradient id="crossbarGrad" x1="0%" y1="50%" x2="100%" y2="50%">
+      <stop offset="0%" stop-color="#FF9933" stop-opacity="0.9"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="1"/>
+      <stop offset="100%" stop-color="#10B981" stop-opacity="0.9"/>
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="neonGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <filter id="subtleGlow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Ambient background glow -->
+  <circle cx="400" cy="400" r="360" fill="url(#bgGlow)" />
+
+  <!-- Outer Cybernetic Signature Ring (Fine Accents) -->
+  <circle cx="400" cy="400" r="320" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.1" stroke-dasharray="8 12" />
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#FF9933" stroke-width="1.5" stroke-opacity="0.25" stroke-dasharray="160 300" />
+  <circle cx="400" cy="400" r="300" fill="none" stroke="#10B981" stroke-width="1.5" stroke-opacity="0.25" stroke-dasharray="160 300" transform="rotate(180 400 400)" />
+
+  <!-- The Luxury Signature Calligraphic 'A' -->
+  <g filter="url(#neonGlow)">
+    <!-- Main Left Upstroke to Apex (Saffron -> White) -->
+    <path d="M 230 620 C 260 520, 310 280, 380 180 C 400 150, 425 150, 440 185 C 460 230, 440 320, 390 440 C 350 530, 290 600, 240 610 C 200 620, 220 540, 260 450 C 310 330, 390 190, 420 180" 
+          fill="none" 
+          stroke="url(#saffronToWhite)" 
+          stroke-width="14" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Main Right Downstroke Sweep (White -> Emerald Green Luxury Ribbon) -->
+    <path d="M 420 180 C 450 250, 520 440, 570 560 C 600 630, 640 660, 690 640 C 720 625, 730 580, 690 560 C 640 540, 540 600, 480 630" 
+          fill="none" 
+          stroke="url(#whiteToGreen)" 
+          stroke-width="16" 
+          stroke-linecap="round" 
+          stroke-linejoin="round" />
+
+    <!-- Dynamic Signature Crossbar Swoosh with Energy Flourish -->
+    <path d="M 180 470 C 260 460, 370 430, 470 410 C 560 390, 640 370, 710 350 C 735 340, 710 320, 660 335 C 570 360, 420 400, 290 460" 
+          fill="none" 
+          stroke="url(#crossbarGrad)" 
+          stroke-width="9" 
+          stroke-linecap="round" />
+
+    <!-- Signature Dynamic Underline Swoop -->
+    <path d="M 220 670 C 330 690, 490 690, 640 640" 
+          fill="none" 
+          stroke="url(#whiteToGreen)" 
+          stroke-width="5" 
+          stroke-linecap="round" 
+          stroke-dasharray="140 20" />
+  </g>
+
+  <!-- Glowing Energy Node Sparks -->
+  <circle cx="420" cy="180" r="7" fill="#FFFFFF" filter="url(#subtleGlow)" />
+  <circle cx="420" cy="180" r="3" fill="#FF9933" />
+
+  <circle cx="690" cy="640" r="5" fill="#10B981" filter="url(#subtleGlow)" />
+  <circle cx="180" cy="470" r="4" fill="#FF7A00" filter="url(#subtleGlow)" />
+
+  <!-- Subtle Micro Signature Text under the mark -->
+  <text x="400" y="745" text-anchor="middle" font-family="'Segoe UI', 'Montserrat', -apple-system, sans-serif" font-size="20" font-weight="700" letter-spacing="14" fill="#FFFFFF" fill-opacity="0.85">
+    AURIX
+  </text>
+  <text x="400" y="770" text-anchor="middle" font-family="'Segoe UI', 'Montserrat', -apple-system, sans-serif" font-size="11" font-weight="500" letter-spacing="6" fill="#10B981" fill-opacity="0.75">
+    SUSTAINABLE INTELLIGENCE
+  </text>
+</svg>
+</div>
+</body>
+</html>

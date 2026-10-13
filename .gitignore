@@ -1,0 +1,43 @@
+# Python
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.ipynb_checkpoints/
+
+# Node / React
+frontend/node_modules/
+frontend/dist/
+frontend/.vite/
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# Java / Spring Boot / Maven
+backend/target/
+*.class
+*.jar
+*.war
+*.ear
+
+# Logs & Crash Dumps
+*.log
+hs_err_pid*.log
+replay_pid*.log
+
+# IDE & Editor
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# OS Temporary Files
+.DS_Store
+Thumbs.db
+temp_chrome/
