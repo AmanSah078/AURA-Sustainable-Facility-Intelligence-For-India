@@ -95,8 +95,8 @@ AURA is engineered with an enterprise-grade, decoupled full-stack architecture:
 Clone the repository and run the automated startup script:
 
 ```powershell
-git clone https://github.com/AmanSah078/AURA.git
-cd AURA
+git clone https://github.com/AmanSah078/AURA-Sustainable-Facility-Intelligence-For-India.git
+cd AURA-Sustainable-Facility-Intelligence-For-India
 .\run_project.ps1
 ```
 
